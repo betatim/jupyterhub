@@ -1366,7 +1366,7 @@ class JupyterHub(Application):
             PrefixLoader({'templates': FileSystemLoader([base_path])}, '/'),
             FileSystemLoader(self.template_paths)
         ])
-        # comment
+        self.log.debug(self.template_paths)
         jinja_env = Environment(
             loader=loader,
             **jinja_options
