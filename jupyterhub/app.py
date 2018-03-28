@@ -1367,6 +1367,7 @@ class JupyterHub(Application):
             FileSystemLoader(self.template_paths)
         ])
         self.log.error("TEMPLATES %s", self.template_paths)
+        self.log.error("TEMPLATES %s", base_path)
         jinja_env = Environment(
             loader=loader,
             **jinja_options
